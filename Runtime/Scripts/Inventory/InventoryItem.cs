@@ -16,7 +16,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public int amount;
     public GameObject hoverInformation;
     public TextMeshProUGUI itemInformationTextMesh;
-    public string itemInformation;
+    private string itemInformation;
 
     public Sprite GetSprite()
     {
@@ -31,8 +31,9 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData) //when mouse hover over
     {
+        
         hoverInformation.SetActive(true);
-        itemInformationTextMesh.SetText(itemInformation);
+        //itemInformationTextMesh.SetText(itemInformation);
     }
 
     public void OnPointerExit(PointerEventData eventData)
