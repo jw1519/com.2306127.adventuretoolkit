@@ -375,7 +375,7 @@ MonoBehaviour:
   sand: {fileID: 7025978215801612146, guid: 5e527641451321e43ad557e185868bdc, type: 3}
   water: {fileID: 7025978215801612146, guid: be0ee091d70049841934c12c1f31ebab, type: 3}
   grassAndTree: {fileID: 4184987404829733602, guid: e6a371455a5b91045ad1d5ceabc0de1f, type: 3}
-  TileParent: {fileID: 1166120097}
+  tileParent: {fileID: 1166120097}
   navMeshSurface: {fileID: 1166120098}
   width: 20
   height: 20

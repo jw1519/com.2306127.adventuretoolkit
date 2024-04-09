@@ -18,7 +18,7 @@ namespace TileMap
         public GameObject water;
         public GameObject grassAndTree;
 
-        public Transform TileParent;
+        public Transform tileParent;
         public NavMeshSurface navMeshSurface;
 
         public float width = 5f;
@@ -40,7 +40,7 @@ namespace TileMap
                     int index = random.Next(Blocklist.Count);
 
                     GameObject prefabInstance = Instantiate(Blocklist[index]);
-                    prefabInstance.transform.SetParent(TileParent);
+                    prefabInstance.transform.SetParent(tileParent);
                     prefabInstance.transform.position = pos;
                 }
             }
