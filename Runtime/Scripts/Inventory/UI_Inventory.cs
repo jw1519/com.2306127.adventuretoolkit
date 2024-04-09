@@ -17,7 +17,7 @@ public class UI_Inventory : MonoBehaviour
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
     }
 
-    private void RefreshInvetoryItems()
+    private void RefreshInvetoryItems() // this can be called when a new item is collected
     {
         int x = 0;
         int y = 0;
