@@ -4,29 +4,36 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int CurruntHealth;
+    public int CurrentHealth;
     public TextMeshProUGUI HealthText;
     public Button LoseHealthButton;
     public Button GainHealthbutton;
+    public int StartingHP;
     void Awake()
     {
-        CurruntHealth = 10;
-        HealthText.SetText($"Health- {CurruntHealth}");
+        SetCurrentHealth(StartingHP);
     }
+
+    private void SetCurrentHealth(int HealthToSet)
+    {
+        CurrentHealth = 10;
+        HealthText.SetText($"Health- {CurrentHealth}");
+    }
+
     public void LoseHealth()
     {
-        if (CurruntHealth != 0)
+        if (CurrentHealth != 0)
         {
-            CurruntHealth--;
-            HealthText.SetText($"Health- {CurruntHealth}");
+            CurrentHealth--;
+            HealthText.SetText($"Health- {CurrentHealth}");
         }
     }
     public void GainHealth()
     {
-        if (CurruntHealth != 10)
+        if (CurrentHealth != 10)
         {
-            CurruntHealth++;
-            HealthText.SetText($"Health- {CurruntHealth}");
+            CurrentHealth++;
+            HealthText.SetText($"Health- {CurrentHealth}");
         }
     }
 }

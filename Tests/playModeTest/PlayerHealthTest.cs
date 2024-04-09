@@ -8,18 +8,8 @@ public class PlayerHealthTest
 {
     // A Test behaves as an ordinary method
     [Test]
-    public void PlayerHealthTestSimplePasses()
+    public void PlayerHealth_CheckCurrentHP() //current hp is set to given value
     {
-        // Use the Assert class to test conditions
-    }
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator PlayerHealthTestWithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        var Health = new Hea
     }
 }
