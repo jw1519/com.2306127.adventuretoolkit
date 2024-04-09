@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,16 +10,16 @@ namespace charactercontroller
 
         private float gravity = -9.81f;//earths gravity
         private CharacterController characterController;
-        private NavMeshAgent Player;
-        private Vector3 Velocity;
-        private Animator Animator;
+        private NavMeshAgent player;
+        private Vector3 velocity;
+        private Animator animator;
 
         // Start is called before the first frame update
         void Start()
         {
             characterController = GetComponent<CharacterController>();
-            Player = GetComponent<NavMeshAgent>();
-            Animator = GetComponent<Animator>();
+            player = GetComponent<NavMeshAgent>();
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -36,39 +34,35 @@ namespace charactercontroller
             if (horizontal != 0)
             {
                 transform.Rotate(Vector3.up, horizontal * rotationspeed * Time.deltaTime);
-                Player.ResetPath();
+                player.ResetPath();
             }
             //move character
             if (direction.magnitude >= 0.1f)
             {
                 if (vertical >= 0)
                 {
-                    Player.Move(transform.forward * vertical * movementSpeed * Time.deltaTime);
-                    Player.ResetPath();
+                    player.Move(transform.forward * vertical * movementSpeed * Time.deltaTime);
+                    player.ResetPath();
                 }
                 else
                 {
-                    Player.Move(-transform.forward * -vertical * movementSpeed * Time.deltaTime);
-                    Player.ResetPath();
+                    player.Move(-transform.forward * -vertical * movementSpeed * Time.deltaTime);
+                    player.ResetPath();
                 }
                 //updates animation peramitors
-                if (Animator != null)
+                if (animator != null)
                 {
-                    Animator.SetFloat("speed", Mathf.Abs(vertical));
-                    Animator.SetFloat("direction", horizontal);
+                    animator.SetFloat("speed", Mathf.Abs(vertical));
+                    animator.SetFloat("direction", horizontal);
                 }
             }
-
             //gravity apply
-            if (characterController.isGrounded && Velocity.y < 0)
+            if (characterController.isGrounded && velocity.y < 0)
             {
-                Velocity.y = 0;
+                velocity.y = 0;
             }
-
-            Velocity.y += gravity * Time.deltaTime;
-            Player.Move(Velocity * Time.deltaTime);
-
-
+            velocity.y += gravity * Time.deltaTime;
+            player.Move(velocity * Time.deltaTime);
         }
     }
 }

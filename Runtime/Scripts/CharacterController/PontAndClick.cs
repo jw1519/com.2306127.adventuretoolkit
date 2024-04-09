@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,7 +8,7 @@ namespace charactercontroller
         public NavMeshAgent player;
         public Animator animator;
         [SerializeField]
-        private Vector3 Target;
+        private Vector3 target;
 
         // Update is called once per frame
         private void Update()
@@ -24,14 +19,14 @@ namespace charactercontroller
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Target = hit.point;
-                    player.SetDestination(Target);
+                    target = hit.point;
+                    player.SetDestination(target);
                 }
 
             }
             if (animator != null)
             {
-                if (Target != null)
+                if (target != null)
                     animator.SetFloat("speed", player.velocity.magnitude);
             }
         }

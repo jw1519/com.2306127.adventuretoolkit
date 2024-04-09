@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -17,21 +14,15 @@ namespace charactercontroller
         [SerializeField]
         Vector2 inputvalue;
 
-
-
-        // Start is called before the first frame update
         void Start()
         {
             player = GetComponent<NavMeshAgent>();
         }
 
-        // Update is called once per frame
         void Update()
         {
-
             float horizontal = inputvalue.x;
             float vertical = inputvalue.y;
-
             Vector3 direction = new Vector3(0, 0, vertical).normalized;
 
             //rotate character

@@ -12,11 +12,10 @@ namespace charactercontroller
         public GameObject claire;
         public GameObject thumbStickLeft;
 
-        //tick icon
+        [Header("Tick Icons")]
         public GameObject tickPointAndClick;
         public GameObject tickThirdPerson;
         public GameObject tickThumbStickLeft;
-
 
         public void ActivateMenu()
         {
@@ -24,7 +23,6 @@ namespace charactercontroller
             pauseButton.SetActive(false);
             exitButton.SetActive(true);
             claire.SetActive(false);
-
         }
 
         public void DeactivateMenu()
@@ -70,7 +68,5 @@ namespace charactercontroller
             thumbStickLeft.SetActive(false);
             tickThumbStickLeft.SetActive(false);
         }
-
-
     }
 }
