@@ -8,32 +8,43 @@ public class Health : MonoBehaviour
     public TextMeshProUGUI HealthText;
     public Button LoseHealthButton;
     public Button GainHealthbutton;
-    public int StartingHP;
+    public int StartingHP = 100;
+    public int maxHealth = 10;
     void Awake()
     {
         SetCurrentHealth(StartingHP);
     }
 
-    private void SetCurrentHealth(int HealthToSet)
+    public void SetCurrentHealth(int HealthToSet)
     {
-        CurrentHealth = 10;
-        HealthText.SetText($"Health- {CurrentHealth}");
+        CurrentHealth = HealthToSet;
+        
     }
 
-    public void LoseHealth()
+    public void LoseHealth(int HealthToDecrease)
     {
-        if (CurrentHealth != 0)
+        if (CurrentHealth > 0)
         {
-            CurrentHealth--;
-            HealthText.SetText($"Health- {CurrentHealth}");
+            CurrentHealth -= HealthToDecrease;
+        }
+        if (CurrentHealth < 0)
+        {
+            CurrentHealth = 0;
         }
     }
-    public void GainHealth()
+    public void GainHealth(int HealthToGain)
     {
-        if (CurrentHealth != 10)
+        if (CurrentHealth < maxHealth)
         {
-            CurrentHealth++;
-            HealthText.SetText($"Health- {CurrentHealth}");
+            CurrentHealth += HealthToGain;
         }
+        if (CurrentHealth > maxHealth)
+        {
+            CurrentHealth = maxHealth;
+        }
+    }
+    private void Update()
+    {
+        HealthText.SetText($"Health- {CurrentHealth}");
     }
 }
