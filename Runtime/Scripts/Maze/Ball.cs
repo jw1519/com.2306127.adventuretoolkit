@@ -6,7 +6,6 @@ namespace PhysicsPuzzle
 {
     public class Ball : MonoBehaviour
     {
-
         public GameObject ballPrefab;
 
         void OnTriggerExit(Collider other)
