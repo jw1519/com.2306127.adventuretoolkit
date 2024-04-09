@@ -16,6 +16,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public int amount;
     public GameObject hoverInformation;
     public TextMeshProUGUI itemInformationTextMesh;
+
     private string itemInformation;
 
     public Sprite GetSprite()
