@@ -1099,7 +1099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 270637800574939054, guid: 671bbe4f118cbb54488ce7e25f2dd576, type: 3}
       propertyPath: m_Size.y
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 270637800574939054, guid: 671bbe4f118cbb54488ce7e25f2dd576, type: 3}
       propertyPath: m_Size.z
@@ -2134,6 +2134,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3205483793956026121, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3741535217021803883, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 60
@@ -2190,6 +2194,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1702258708}
+    - target: {fileID: 5306258008232114337, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581888822946404686, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581888822946404686, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2621,6 +2637,10 @@ PrefabInstance:
     - target: {fileID: 2330859452404509022, guid: d83fc5540b2f0d145baa77e0bd9d7bf1, type: 3}
       propertyPath: m_Name
       value: LeftThumbStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330859452404509022, guid: d83fc5540b2f0d145baa77e0bd9d7bf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4157527400936782684, guid: d83fc5540b2f0d145baa77e0bd9d7bf1, type: 3}
       propertyPath: m_Pivot.x
@@ -3523,6 +3543,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6135427646232171812}
     m_Modifications:
+    - target: {fileID: 338362427044689820, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 612462571947931181, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3530,6 +3554,14 @@ PrefabInstance:
     - target: {fileID: 795517106685797737, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
       propertyPath: m_Name
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907053399187228471, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473760287980817646, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3560512217614861407, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3625,7 +3657,7 @@ PrefabInstance:
       objectReference: {fileID: 1820233538}
     - target: {fileID: 6171269761807937252, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7754849220626705391, guid: ad7880837db8dd04d9fb9eb385801a70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

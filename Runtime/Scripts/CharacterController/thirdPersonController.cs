@@ -36,19 +36,19 @@ namespace charactercontroller
                 transform.Rotate(Vector3.up, horizontal * rotationspeed * Time.deltaTime);
                 player.ResetPath();
             }
-            ////move character Movements are controlled in the input system this can be used 
-            //if (direction.magnitude >= 0.1f)
-            //{
-            //    if (vertical >= 0)
-            //    {
-            //        player.Move(transform.forward * vertical * movementSpeed * Time.deltaTime);
-            //        player.ResetPath();
-            //    }
-            //    else
-            //    {
-            //        player.Move(-transform.forward * -vertical * movementSpeed * Time.deltaTime);
-            //        player.ResetPath();
-            //    }
+            //move character
+            if (direction.magnitude >= 0.1f)
+            {
+                if (vertical >= 0)
+                {
+                    player.Move(transform.forward * vertical * movementSpeed * Time.deltaTime);
+                    player.ResetPath();
+                }
+                else
+                {
+                    player.Move(-transform.forward * -vertical * movementSpeed * Time.deltaTime);
+                    player.ResetPath();
+                }
                 //updates animation peramitors
                 if (animator != null)
                 {
@@ -57,12 +57,12 @@ namespace charactercontroller
                 }
             }
             //gravity apply
-        //    if (characterController.isGrounded && velocity.y < 0)
-        //    {
-        //        velocity.y = 0;
-        //    }
-        //    velocity.y += gravity * Time.deltaTime;
-        //    player.Move(velocity * Time.deltaTime);
-        //}
+            if (characterController.isGrounded && velocity.y < 0)
+            {
+                velocity.y = 0;
+            }
+            velocity.y += gravity * Time.deltaTime;
+            player.Move(velocity * Time.deltaTime);
+        }
     }
 }
