@@ -1,9 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using UnityEditor.SceneManagement;
-using Unity.VisualScripting;
 using Unity.AI.Navigation;
 
 namespace TileMap

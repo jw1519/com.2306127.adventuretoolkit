@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public TextMeshProUGUI HealthText;
     public Button LoseHealthButton;
     public Button GainHealthbutton;
-    public int StartingHP = 100;
+    public int StartingHP = 10;
     public int maxHealth = 10;
     void Awake()
     {

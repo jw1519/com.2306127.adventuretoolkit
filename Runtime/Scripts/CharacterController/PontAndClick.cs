@@ -7,6 +7,7 @@ namespace charactercontroller
     {
         public NavMeshAgent player;
         public Animator animator;
+        public float rotationspeed = 100.0f;
         [SerializeField]
         private Vector3 target;
 
@@ -28,6 +29,14 @@ namespace charactercontroller
             {
                 if (target != null)
                     animator.SetFloat("speed", player.velocity.magnitude);
+            }
+            float horizontal = Input.GetAxis("Horizontal");
+
+            //rotate character
+            if (horizontal != 0)
+            {
+                transform.Rotate(Vector3.up, horizontal * rotationspeed * Time.deltaTime);
+                player.ResetPath();
             }
         }
     }
