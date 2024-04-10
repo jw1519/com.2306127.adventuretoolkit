@@ -44,7 +44,7 @@ namespace charactercontroller
         {
             claire.GetComponent<thirdPersonController>().enabled = true;
             tickThirdPerson.SetActive(true);
-            DeactivateThumbStickLeft();
+
         }
         public void ActivateThumbStickLeft()
         {
@@ -52,7 +52,7 @@ namespace charactercontroller
             thumbStickLeft.SetActive(true);
             tickThumbStickLeft.SetActive(true);
             DeactivatePointAndClick();
-            DeactivateThirdPerson();
+
         }
 
         public void DeactivatePointAndClick()
