@@ -6,7 +6,7 @@ namespace charactercontroller
 {
     public class ThumbStickContoller : MonoBehaviour
     {
-        public float speed = 2.0f;
+        public float speed = 20.0f;
         public NavMeshAgent player;
         public Animator animator;
         public float rotationspeed = 100.0f;

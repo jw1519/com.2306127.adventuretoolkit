@@ -537,10 +537,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3727b010b1a9e4a8512e2481b9bb7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurruntHealth: 0
+  CurrentHealth: 0
   HealthText: {fileID: 1644499724}
   LoseHealthButton: {fileID: 803048477}
   GainHealthbutton: {fileID: 1969013288}
+  StartingHP: 100
+  maxHealth: 10
 --- !u!4 &557922049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2033075754743737013, guid: e9929e87bfdfc7744948865478dab5de, type: 3}
@@ -761,13 +763,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 527394621}
-        m_TargetAssemblyTypeName: Health, my2306127.adventuretoolkit
+        m_TargetAssemblyTypeName: Health, Main
         m_MethodName: LoseHealth
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -825,9 +827,9 @@ RectTransform:
   - {fileID: 1062044376}
   m_Father: {fileID: 6135427646232171812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475.5, y: 195.9}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90.400024, y: -85.50003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850691169 stripped
@@ -1534,7 +1536,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
@@ -2014,9 +2016,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6135427646232171812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -449.9, y: 235.4}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 116, y: -46}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1644499723
@@ -2425,9 +2427,9 @@ RectTransform:
   - {fileID: 1590113119}
   m_Father: {fileID: 6135427646232171812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475.5, y: 164.1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90.400024, y: -117.30002}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969013288
@@ -2475,13 +2477,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 527394621}
-        m_TargetAssemblyTypeName: Health, my2306127.adventuretoolkit
+        m_TargetAssemblyTypeName: Health, Main
         m_MethodName: GainHealth
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2732,7 +2734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3578503927890976914, guid: 58a99a7c91a4b2a4ab6206488f4b4652, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3578503927890976914, guid: 58a99a7c91a4b2a4ab6206488f4b4652, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2740,7 +2742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3578503927890976914, guid: 58a99a7c91a4b2a4ab6206488f4b4652, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3578503927890976914, guid: 58a99a7c91a4b2a4ab6206488f4b4652, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2784,7 +2786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3578503927890976914, guid: 58a99a7c91a4b2a4ab6206488f4b4652, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -465
+      value: 177
       objectReference: {fileID: 0}
     - target: {fileID: 3578503927890976914, guid: 58a99a7c91a4b2a4ab6206488f4b4652, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2880,6 +2882,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1537410431}
+    - target: {fileID: 4113812974192408390, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113812974192408390, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -225
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113812974192408390, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 4983077888005931861, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2910,11 +2924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5056349936772569277, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5056349936772569277, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 5056349936772569277, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2946,11 +2960,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5056349936772569277, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 5056349936772569277, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 5056349936772569277, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2964,6 +2978,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5817152441823371533, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817152441823371533, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817152441823371533, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817152441823371533, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -82
+      objectReference: {fileID: 0}
     - target: {fileID: 7880441324282496907, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_Name
       value: Inventory
@@ -2971,6 +3001,14 @@ PrefabInstance:
     - target: {fileID: 8345344104143092195, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686500918131061750, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -226
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686500918131061750, guid: 49c98152c1db38241a4f9e12839a8e10, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
