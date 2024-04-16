@@ -5,9 +5,9 @@ namespace charactercontroller
 {
     public class PontAndClick : MonoBehaviour
     {
-        public NavMeshAgent player;
-        public Animator animator;
-        public float rotationspeed = 100.0f;
+        public NavMeshAgent Player;
+        public Animator Animator;
+        public float Rotationspeed = 100.0f;
         [SerializeField]
         private Vector3 target;
 
@@ -21,22 +21,22 @@ namespace charactercontroller
                 if (Physics.Raycast(ray, out hit))
                 {
                     target = hit.point;
-                    player.SetDestination(target);
+                    Player.SetDestination(target);
                 }
 
             }
-            if (animator != null)
+            if (Animator != null)
             {
                 if (target != null)
-                    animator.SetFloat("speed", player.velocity.magnitude);
+                    Animator.SetFloat("speed", Player.velocity.magnitude);
             }
             float horizontal = Input.GetAxis("Horizontal");
 
             //rotate character
             if (horizontal != 0)
             {
-                transform.Rotate(Vector3.up, horizontal * rotationspeed * Time.deltaTime);
-                player.ResetPath();
+                transform.Rotate(Vector3.up, horizontal * Rotationspeed * Time.deltaTime);
+                Player.ResetPath();
             }
         }
     }

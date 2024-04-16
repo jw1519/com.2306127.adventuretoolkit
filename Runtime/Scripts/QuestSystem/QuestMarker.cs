@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class QuestMarker : MonoBehaviour
 {
-    public string questName;
-    public string questDescription;
-    public string questCompletionMessage;
+    public string QuestName;
+    public string QuestDescription;
+    public string QuestCompletionMessage;
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class QuestMarker : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            QuestManager.instance.CompleteQuest(questName);
+            QuestManager.instance.CompleteQuest(QuestName);
             gameObject.SetActive(false);
         }
     }

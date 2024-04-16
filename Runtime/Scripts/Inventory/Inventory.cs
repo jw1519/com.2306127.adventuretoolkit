@@ -9,9 +9,9 @@ public class Inventory : MonoBehaviour
     {
         itemList = new List<InventoryItem>();
 
-        AddItem(new InventoryItem { itemType = InventoryItem.ItemType.Sword, amount = 1 });
-        AddItem(new InventoryItem { itemType = InventoryItem.ItemType.HealthPotion, amount = 1 });
-        AddItem(new InventoryItem { itemType = InventoryItem.ItemType.Gold, amount = 100 });
+        AddItem(new InventoryItem { itemType = InventoryItem.ItemType.Sword, Amount = 1 });
+        AddItem(new InventoryItem { itemType = InventoryItem.ItemType.HealthPotion, Amount = 1 });
+        AddItem(new InventoryItem { itemType = InventoryItem.ItemType.Gold, Amount = 100 });
         Debug.Log(itemList.Count);
     }
     public void AddItem(InventoryItem item)

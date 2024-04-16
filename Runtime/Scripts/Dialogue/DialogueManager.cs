@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogueText;
-    public Animator animator;
+    public TextMeshProUGUI NameText;
+    public TextMeshProUGUI DialogueText;
+    public Animator Animator;
+    public GameObject Choices;
 
     public Queue <string> sentences;
 
@@ -19,8 +20,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue) 
     {
-        animator.SetBool("IsOpen", true); //the box for the dialogue is animated in
-        nameText.text = dialogue.name;
+        Animator.SetBool("IsOpen", true); //the box for the dialogue is animated in
+        NameText.text = dialogue.name;
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -43,15 +44,19 @@ public class DialogueManager : MonoBehaviour
     }
     IEnumerator TypeSentence (string sentence)
     {
-        dialogueText.text = "";
+        DialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
+            DialogueText.text += letter;
             yield return null;
         }
     }
     public void EndDialogue ()
     {
-        animator.SetBool("IsOpen", false);
+        Animator.SetBool("IsOpen", false);
+    }
+    public void OpenChoices()
+    {
+
     }
 }

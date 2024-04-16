@@ -23,9 +23,9 @@ public class QuestManager : MonoBehaviour
 
     public void RegisterQuestMarker(QuestMarker marker)
     {
-        if (!questMarkers.ContainsKey(marker.questName))
+        if (!questMarkers.ContainsKey(marker.QuestName))
         {
-            questMarkers.Add(marker.questName, marker);
+            questMarkers.Add(marker.QuestName, marker);
             marker.gameObject.SetActive(false); //disable the marker 
         }
     }

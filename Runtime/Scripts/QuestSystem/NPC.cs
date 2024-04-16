@@ -11,19 +11,19 @@ public class NPC : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Quest quest = QuestManager.instance.quests.Find(q => q.questName == questMarker.questName);
+            Quest quest = QuestManager.instance.quests.Find(q => q.questName == questMarker.QuestName);
             questDialogueTrigger.TriggerDialogue();
 
             if (quest == null) // quest not yet started
             {
-                QuestManager.instance.AddQuest(questMarker.questName, questMarker.questDescription);
+                QuestManager.instance.AddQuest(questMarker.QuestName, questMarker.QuestDescription);
                 questMarker.gameObject.SetActive(true);
-                Debug.Log(questMarker.questDescription);
+                Debug.Log(questMarker.QuestDescription);
             }
             else if (quest.isCompleted == true)
             {
-                QuestManager.instance.RemoveQuest(questMarker.questName);
-                Debug.Log(questMarker.questCompletionMessage);
+                QuestManager.instance.RemoveQuest(questMarker.QuestName);
+                Debug.Log(questMarker.QuestCompletionMessage);
                 endQuestDialogueTrigger.TriggerDialogue();
 
                 QuestManager.instance.questMenu.text = " Quests: \n";
