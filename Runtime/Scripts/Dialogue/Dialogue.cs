@@ -4,7 +4,7 @@ using UnityEngine;
 //Dialogue can be set in the inspector
 public class Dialogue
 {
-    public string name;
+    public string Name;
 
 
     [TextArea(3, 10)]

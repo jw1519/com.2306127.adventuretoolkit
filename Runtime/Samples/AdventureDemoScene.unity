@@ -370,12 +370,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 27a4624ac870fd44d8a128c29e059a2a, type: 2}
     - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
+      propertyPath: QuestName
+      value: Find my cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
       propertyPath: questName
       value: Find my cat
       objectReference: {fileID: 0}
     - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
+      propertyPath: QuestDescription
+      value: lady has lost a cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
       propertyPath: questDescription
       value: can you fins my cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
+      propertyPath: QuestCompletionMessage
+      value: thank you
       objectReference: {fileID: 0}
     - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
       propertyPath: questCompletionMessage
@@ -1015,12 +1027,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 27a4624ac870fd44d8a128c29e059a2a, type: 2}
     - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
+      propertyPath: QuestName
+      value: find my bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
       propertyPath: questName
       value: Find purse
       objectReference: {fileID: 0}
     - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
+      propertyPath: QuestDescription
+      value: a lady has lost her purse
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
       propertyPath: questDescription
       value: a lady has lost her purse
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
+      propertyPath: QuestCompletionMessage
+      value: thank you
       objectReference: {fileID: 0}
     - target: {fileID: 2690635365665150931, guid: 49376826a075f044fa91a4e7a11ea190, type: 3}
       propertyPath: questCompletionMessage
@@ -1319,6 +1343,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1920108491}
     - target: {fileID: 290097486749936148, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1702258708}
+    - target: {fileID: 290097486749936148, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 1702258715}
+    - target: {fileID: 290097486749936148, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1407,6 +1439,11 @@ GameObject:
 --- !u!195 &1702258708 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 1218520513278539560, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
+  m_PrefabInstance: {fileID: 1702258683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1702258715 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7549670200998661128, guid: add795c37a53e1a4a88473ec05d72304, type: 3}
   m_PrefabInstance: {fileID: 1702258683}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1809528420 stripped

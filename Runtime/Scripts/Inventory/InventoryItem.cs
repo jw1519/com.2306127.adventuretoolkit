@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public enum ItemType //declare the items
+    public enum Item //declare the items
     {
         Sword,
         HealthPotion,
@@ -12,7 +12,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         QuestItem,
     }
 
-    public ItemType itemType;
+    public Item itemType;
     public int Amount;
     public GameObject HoverInformation;
     public TextMeshProUGUI ItemInformationTextMesh;
@@ -24,9 +24,9 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         switch (itemType)
         {
             default:
-            case ItemType.Sword:        return ItemAssets.instance.swordSprite;
-            case ItemType.HealthPotion: return ItemAssets.instance.healthPotionSprite;
-            case ItemType.Gold:         return ItemAssets.instance.goldSprite;
+            case Item.Sword:        return ItemAssets.instance.swordSprite;
+            case Item.HealthPotion: return ItemAssets.instance.healthPotionSprite;
+            case Item.Gold:         return ItemAssets.instance.goldSprite;
         }
     }
 

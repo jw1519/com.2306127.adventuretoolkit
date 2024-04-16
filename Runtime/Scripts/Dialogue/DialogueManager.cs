@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue (Dialogue dialogue) 
     {
         Animator.SetBool("IsOpen", true); //the box for the dialogue is animated in
-        NameText.text = dialogue.name;
+        NameText.text = dialogue.Name;
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)

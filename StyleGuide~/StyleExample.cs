@@ -1,14 +1,4 @@
-// STYLE SHEET EXAMPLE
-
-// GENERAL:
-// - This is an example Style Guide for use with your Unity project.
-// - Omit or add to these rules to fit your team's preferences.
-// - Use an example style guide to start:
-// - Microsoft's Framework Design Guidelines are here: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/
-// - Google also maintains a style guide here: https://google.github.io/styleguide/csharp-style.html
-
-// - Customize these rules to build your own team style guide, then apply consistently. 
-// - When in doubt, your team's style guide prevails.
+// STYLE SHEET
 
 // NAMING/CASING:
 // - Use Pascal case (e.g. ExamplePlayerController, MaxHealth, etc.) unless noted otherwise
