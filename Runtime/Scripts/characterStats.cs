@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Xml.Serialization;
 using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class characterStats : MonoBehaviour
@@ -46,12 +42,10 @@ public class characterStats : MonoBehaviour
             int newWisdom = Random.Range(1, 20);
             int newcharisma = Random.Range(1, 20);
             SaveStats(new Stat(newStrength, newWisdom, newcharisma));
-
         }
     }
     public void DisplayStats()
     {
         StatsText.text = $"Strength: {stat.Strength} \n Wisdom: {stat.Wisdom} \n Charisma: {stat.Charisma}"; 
     }
-    
 }
